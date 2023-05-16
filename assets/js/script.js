@@ -8,52 +8,60 @@ const countryInput = document.querySelector('[name=country]');
 const searchButton = document.querySelector('.filter__button');
 const favorite = JSON.parse(localStorage.getItem('favorite')) || [];
 const myCollection = JSON.parse(localStorage.getItem('my-collection')) || [];
+const currentCollection = JSON.parse(localStorage.getItem('filtred_collection')) || collection.data;
+const backBtn = document.querySelector('.header__back');
 
-const itemsPerPage = 2;
-// Get the current page from URL parameters
-const urlParams = new URLSearchParams(window.location.search);
-const currentPage = parseInt(urlParams.get('page')) || 1;
-
-// Calculate total pages
-const totalPages = Math.ceil(collection.data.length / itemsPerPage);
-
-// Calculate start and end index of items to display
-const startIndex = (currentPage - 1) * itemsPerPage;
-const endIndex = startIndex + itemsPerPage;
-
-// Get the data for the current page
-const currentCollectionData = collection.data.slice(startIndex, endIndex);
-
-// Render pagination links
-const paginationElement = document.querySelector('.pagination');
-for (let i = 1; i <= totalPages; i++) {
-    const li = document.createElement('li');
-    const pageLink = document.createElement('a');
-    pageLink.classList.add('pagination__item');
-    pageLink.href = `?page=${i}`;
-    pageLink.textContent = i;
-
-    if (i === currentPage) {
-        pageLink.classList.add('pagination__item_active');
-    }
-
-    li.appendChild(pageLink);
-    paginationElement.appendChild(li);
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-    renderCollection(currentCollectionData);
+    pagination(currentCollection);
     setCounter('.fav-counter', favorite.length);
     setCounter('.collection-counter', myCollection.length);
     setFavIcon();
     setButtonText();
 });
+backBtn.addEventListener('click', () => history.back())
 searchButton.addEventListener('click', filterCollection);
 artistInput.addEventListener('keyup', validation);
 collectionList.addEventListener('click', (event) => {
     handleFavorite(event);
     handleCollection(event);
 })
+
+function pagination(collectionData) {
+    const itemsPerPage = 2;
+    // Get the current page from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentPage = parseInt(urlParams.get('page')) || 1;
+    
+    // Calculate total pages
+    const totalPages = Math.ceil(collectionData.length / itemsPerPage);
+    
+    // Calculate start and end index of items to display
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    
+    // Get the data for the current page
+    const currentCollectionData = collectionData.slice(startIndex, endIndex);
+    
+    // Render pagination links
+    const paginationElement = document.querySelector('.pagination');
+    paginationElement.innerHTML = '';
+    for (let i = 1; i <= totalPages; i++) {
+        const li = document.createElement('li');
+        const pageLink = document.createElement('a');
+        pageLink.classList.add('pagination__item');
+        pageLink.href = `?page=${i}`;
+        pageLink.textContent = i;
+    
+        if (i === currentPage) {
+            pageLink.classList.add('pagination__item_active');
+        }
+    
+        li.appendChild(pageLink);
+        paginationElement.appendChild(li);
+    }
+    renderCollection(currentCollectionData);
+}
 
 function renderCollection(collection = []) {
     collectionList.innerHTML = '';
@@ -80,8 +88,8 @@ function renderCollection(collection = []) {
         collectionList.appendChild(li)
     }
     )
-    const img = collectionList.querySelector('.collection__image')
-    setImageHeight(img.clientWidth)
+    const img = collectionList.querySelector('.collection__image');
+    setImageHeight(img?.clientWidth)
 }
 
 function setImageHeight(clientWidth) {
@@ -99,6 +107,7 @@ function filterCollection() {
     const decadeValue = Number(decadeInput.value);
     const countryValue = countryInput.value;
 
+    localStorage.removeItem('filtred_collection');
     const filteredCollection = collection.data
         .filter(el => el.artist.toLowerCase().includes(artistValue))
         .filter(el => el.style.toLowerCase().includes(genreValue))
@@ -112,7 +121,8 @@ function filterCollection() {
             }
         })
 
-    renderCollection(filteredCollection)
+        localStorage.setItem('filtred_collection', JSON.stringify(filteredCollection))
+        pagination(filteredCollection);
 }
 
 function validation() {
