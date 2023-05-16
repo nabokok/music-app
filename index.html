@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Library</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <button class="header__back">
+                    <img src="./assets/images/icons/left.svg" alt="back">
+                    Back
+                </button>
+                <ul class="header__icons">
+                    <li class="icon"><img src="./assets/images/icons/favorite.svg" alt="favorite" class="fav__icon">
+                        <span class="fav-counter"></span>
+                    </li>
+                    <li class="icon"><img src="./assets/images/icons/collection.svg" alt="collection">
+                        <span class="collection-counter"></span></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="filter">
+                <div class="filter__item_full">
+                    <input type="text" placeholder="Artist"  name="artist" class="filter__item_full">
+                    <span class="artist-error"></span>
+                </div>
+                <div class="select-wrapper filter__item_half">
+                    <select name="genre" class="select-wrapper__item">
+                        <option value="" disabled selected hidden>Genre</option>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="punk">Punk</option>
+                        <option value="dub">Dub</option>
+                        <option value="heavy metal">Heavy Metal</option>
+                    </select>
+                </div>
+                <div class="select-wrapper filter__item_half">
+                    <select name="decade" class="select-wrapper__item">
+                        <option value="" disabled selected hidden>Decade</option>
+                        <option value="1950">1950-60 рр.</option>
+                        <option value="1960">1960-70 рр.</option>
+                        <option value="1970">1970-80 рр.</option>
+                        <option value="1980">1980-90 рр.</option>
+                        <option value="1990">1990-00 рр.</option>
+                        <option value="2000">2000-10 рр.</option>
+                        <option value="2010">2010-20 рр.</option>
+                        <option value="2020">2020-30 рр.</option>
+                    </select>
+                </div>
+                <div class="select-wrapper filter__item_full">
+                    <select name="country" class="select-wrapper__item">
+                        <option value="" disabled selected hidden>Country</option>
+                        <option value="usa">USA</option>
+                        <option value="england">England</option>
+                    </select>
+                </div>
+                <button class="filter__button">Search</button>
+            </div>
+            <ul class="collection">
+                <!-- json rendering -->
+            </ul>
+            <ul class="pagination">
+                <!-- <li><a class="pagination__item pagination__item_active">1</a></li>
+                <li><a class="pagination__item">2</a></li>
+                <li><a class="pagination__item">3</a></li>
+                <li><a class="pagination__item">...</a></li>
+                <li><a class="pagination__item">8</a></li> -->
+            </ul>
+        </div>
+    </section>
+    <script type="module" src="./assets/js/script.js"></script>
+</body>
+
+</html>

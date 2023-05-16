@@ -1,0 +1,148 @@
+{
+"data" : [
+    {
+        "id": 1,
+        "title": "Let There Be Rock",
+        "artist": "AC/DC",
+        "year": 1977,
+        "style": "Hard Rock",
+        "country": "USA",
+        "img": {
+            "url": "https://i.discogs.com/pNX0PEQA7FeuYeRzt8TrGIG9nJ2h5Cyx0uae_q09XjM/rs:fit/g:sm/q:90/h:594/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2ODY4/Ni0xMzI5NDE1NzA4/LmpwZWc.jpeg",
+            "url2x": "https://i.discogs.com/pNX0PEQA7FeuYeRzt8TrGIG9nJ2h5Cyx0uae_q09XjM/rs:fit/g:sm/q:90/h:594/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2ODY4/Ni0xMzI5NDE1NzA4/LmpwZWc.jpeg",
+            "alt": "Let There Be Rock"
+        }
+      },
+      {
+          "id": 2,
+          "title": "The Wall",
+          "artist": "Pink Floyd",
+          "year": 1979,
+          "style": "Rock",
+          "country": "England",
+          "img": {
+            "url": "https://i.discogs.com/L_VyYyJq5qz9dKeMRuRSGg3ftbl-sadWu4oaJotdn-M/rs:fit/g:sm/q:90/h:600/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwNDE2/MTgtMTM5MDY3OTAy/NS0yMzcyLmpwZWc.jpeg",
+            "url2x": "https://i.discogs.com/L_VyYyJq5qz9dKeMRuRSGg3ftbl-sadWu4oaJotdn-M/rs:fit/g:sm/q:90/h:600/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwNDE2/MTgtMTM5MDY3OTAy/NS0yMzcyLmpwZWc.jpeg",
+            "alt": "The Wall"
+        }
+        },
+        {
+            "id": 3,
+            "title": "Abbey Road",
+            "artist": "The Beatles",
+            "year": 1969,
+            "style": "Pop Rock",
+            "country": "England",
+            "img": {
+                "url": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          },
+          {
+            "id": 4,
+            "title": "Hotel California",
+            "artist": "Eagles",
+            "year": 1976,
+            "style": "Classic Rock",
+            "country": "USA",
+            "img": {
+                "url": "https://i.discogs.com/PZz0RZth-jDXq_vEwv640MTGizMZe5KEc6KTzM6ZKzY/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNTQ4/MTYtMTM4MzkwOTE3/MC0xNzEyLmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/PZz0RZth-jDXq_vEwv640MTGizMZe5KEc6KTzM6ZKzY/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNTQ4/MTYtMTM4MzkwOTE3/MC0xNzEyLmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          },
+          {
+            "id": 5,
+            "title": "No Life 'Til Leather",
+            "artist": "Metallica ",
+            "year": 1982,
+            "style": "Heavy Metal",
+            "country": "USA",
+            "img": {
+                "url": "https://i.discogs.com/BJKpXxZUhzJ_l2Xcgox0UhT0GkYL3tPKPb9IfmjLkNI/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5OTM5/NzAtMTU2MzU2ODEx/OC03MTg4LmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/BJKpXxZUhzJ_l2Xcgox0UhT0GkYL3tPKPb9IfmjLkNI/rs:fit/g:sm/q:90/h:587/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5OTM5/NzAtMTU2MzU2ODEx/OC03MTg4LmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          },
+          {
+            "id": 6,
+            "title": "Abbey Road",
+            "artist": "The Beatles",
+            "year": 1969,
+            "style": "Pop Rock",
+            "country": "England",
+            "img": {
+                "url": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          },
+          {
+            "id": 7,
+            "title": "Abbey Road",
+            "artist": "The Beatles",
+            "year": 1969,
+            "style": "Pop Rock",
+            "country": "England",
+            "img": {
+                "url": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          },
+          {
+            "id": 8,
+            "title": "Abbey Road",
+            "artist": "The Beatles",
+            "year": 1969,
+            "style": "Pop Rock",
+            "country": "England",
+            "img": {
+                "url": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          },
+          {
+            "id": 9,
+            "title": "Abbey Road",
+            "artist": "The Beatles",
+            "year": 1969,
+            "style": "Pop Rock",
+            "country": "England",
+            "img": {
+                "url": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          },
+          {
+            "id": 10,
+            "title": "Abbey Road",
+            "artist": "The Beatles",
+            "year": 1969,
+            "style": "Pop Rock",
+            "country": "England",
+            "img": {
+                "url": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          },
+          {
+            "id": 11,
+            "title": "Abbey Road",
+            "artist": "The Beatles",
+            "year": 1969,
+            "style": "Pop Rock",
+            "country": "England",
+            "img": {
+                "url": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "url2x": "https://i.discogs.com/M2yc5OJZPdVoDm2_UlRRXuDlDguamLLSdnbziNmZoQI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDc0/MjQtMTYzMDYwMTA4/Ny0xMTk5LmpwZWc.jpeg",
+                "alt": "Abbey Road"
+            }
+          }
+]
+    
+    }
