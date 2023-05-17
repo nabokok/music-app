@@ -1,4 +1,4 @@
-import collection from './collection.json' assert {type: 'json'};
+import collection from './collection.js';
 
 const collectionList = document.querySelector('.collection');
 const artistInput = document.querySelector('[name=artist]');
@@ -8,7 +8,7 @@ const countryInput = document.querySelector('[name=country]');
 const searchButton = document.querySelector('.filter__button');
 const favorite = JSON.parse(localStorage.getItem('favorite')) || [];
 const myCollection = JSON.parse(localStorage.getItem('my-collection')) || [];
-const currentCollection = JSON.parse(localStorage.getItem('filtred_collection')) || collection.data;
+const currentCollection = JSON.parse(localStorage.getItem('filtred_collection')) || collection;
 const backBtn = document.querySelector('.header__back');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setFavIcon();
     setButtonText();
 });
+
 // Reset filtration
 backBtn.addEventListener('click', resetFiltration);
 searchButton.addEventListener('click', filterCollection);
@@ -145,7 +146,7 @@ function filterCollection() {
     const countryValue = countryInput.value;
 
     localStorage.removeItem('filtred_collection');
-    const filteredCollection = collection.data
+    const filteredCollection = collection
         .filter(el => el.artist.toLowerCase().includes(artistValue))
         .filter(el => el.style.toLowerCase().includes(genreValue))
         .filter(el => el.country.toLowerCase().includes(countryValue))
