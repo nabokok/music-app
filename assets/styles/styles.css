@@ -296,4 +296,9 @@ select {
     .collection__item {
         width: calc(25% - 12px);
     }
+
+    .filter__button {
+        width: 350px;
+        margin: 0 auto;
+    }
 }
