@@ -110,9 +110,12 @@ select {
     justify-content: center;
 }
 
-.main {
+.main__wrapper {
+    min-height: calc(100vh - 65px);
     padding-top: 16px;
     padding-bottom: 36px;
+    display: flex;
+    flex-direction: column;
 }
 
 .filter {
@@ -172,6 +175,7 @@ select {
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .collection__item {
@@ -284,4 +288,11 @@ select {
     background-color: #0A2530;
     color: #FFFFFF;
     cursor: auto;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 1240px) {
+    .collection__item {
+        width: calc(25% - 12px);
+    }
 }

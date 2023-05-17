@@ -11,7 +11,6 @@ const myCollection = JSON.parse(localStorage.getItem('my-collection')) || [];
 const currentCollection = JSON.parse(localStorage.getItem('filtred_collection')) || collection.data;
 const backBtn = document.querySelector('.header__back');
 
-
 document.addEventListener('DOMContentLoaded', () => {
     pagination(currentCollection);
     setCounter('.fav-counter', favorite.length);
@@ -19,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setFavIcon();
     setButtonText();
 });
-backBtn.addEventListener('click', () => history.back())
+// Reset filtration
+backBtn.addEventListener('click', resetFiltration);
 searchButton.addEventListener('click', filterCollection);
 artistInput.addEventListener('keyup', validation);
 collectionList.addEventListener('click', (event) => {
@@ -27,39 +27,76 @@ collectionList.addEventListener('click', (event) => {
     handleCollection(event);
 })
 
+function resetFiltration() {
+    localStorage.removeItem('filtred_collection');
+    pagination(currentCollection);
+    artistInput.value = '';
+    genreInput.value = '';
+    decadeInput.value = '';
+    countryInput.value = '';
+}
+
 function pagination(collectionData) {
-    const itemsPerPage = 2;
-    // Get the current page from URL parameters
+    const itemsPerPage = 4;
+    const pageRange = 2;
+    const ellipsis = '...';
+
     const urlParams = new URLSearchParams(window.location.search);
     const currentPage = parseInt(urlParams.get('page')) || 1;
-    
-    // Calculate total pages
     const totalPages = Math.ceil(collectionData.length / itemsPerPage);
     
-    // Calculate start and end index of items to display
+    let pagination = [];
+
+    if (totalPages <= 5) {
+        pagination = Array.from({ length: totalPages }, (_, i) => i + 1);
+    } else {
+        pagination.push(1);
+
+        const startRande = Math.max(currentPage - pageRange, 2);
+        const endRange = Math.min(currentPage + pageRange, totalPages - 1);
+
+        if (startRande > 2) {
+            pagination.push(ellipsis);
+        }
+
+        for (let i = startRande; i <= endRange; i++) {
+            pagination.push(i);
+        }
+
+        if (endRange < totalPages - 1) {
+            pagination.push(ellipsis);
+        }
+
+        pagination.push(totalPages);
+    }
+
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    
-    // Get the data for the current page
     const currentCollectionData = collectionData.slice(startIndex, endIndex);
-    
-    // Render pagination links
     const paginationElement = document.querySelector('.pagination');
     paginationElement.innerHTML = '';
-    for (let i = 1; i <= totalPages; i++) {
+
+    pagination.forEach(el => {
         const li = document.createElement('li');
         const pageLink = document.createElement('a');
         pageLink.classList.add('pagination__item');
-        pageLink.href = `?page=${i}`;
-        pageLink.textContent = i;
+        pageLink.href = `?page=${el}`;
+        pageLink.textContent = el;
     
-        if (i === currentPage) {
+        if (el === currentPage) {
             pageLink.classList.add('pagination__item_active');
         }
+
+        if (typeof el === 'string') {
+            li.innerHTML = el;
+            li.classList.add('pagination__item');
+        } else {
+            li.appendChild(pageLink);
+        }
     
-        li.appendChild(pageLink);
         paginationElement.appendChild(li);
-    }
+    })
+    
     renderCollection(currentCollectionData);
 }
 
@@ -121,7 +158,8 @@ function filterCollection() {
             }
         })
 
-        localStorage.setItem('filtred_collection', JSON.stringify(filteredCollection))
+        window.location = '/';
+        localStorage.setItem('filtred_collection', JSON.stringify(filteredCollection));
         pagination(filteredCollection);
 }
 
